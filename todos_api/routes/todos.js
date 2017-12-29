@@ -14,5 +14,9 @@ router.get('/', function(req, res){
 });
 
 
+router.post('/', function(req, res){
+  db.Todo.create({name: "Feed fish"});
+});
+
 
 module.exports = router;
