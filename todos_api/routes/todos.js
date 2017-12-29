@@ -13,7 +13,6 @@ router.get('/', function(req, res){
   })
 });
 
-
 router.post('/', function(req, res){
   // res.send("This is the post route");
   db.Todo.create(req.body)
@@ -25,5 +24,15 @@ router.post('/', function(req, res){
   })
 });
 
+// FOUND by TODOID
+router.get('/:todoId', function(req, res){
+  db.Todo.findById(req.params.todoId)
+  .then(function(foundTodo){
+    res.json(foundTodo);
+  })
+  .catch(function(err){
+    res.send(err);
+  })
+})
 
 module.exports = router;
