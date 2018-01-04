@@ -1,2 +1,2 @@
-# adv_to-do-list
-node, mongo, es6
+# to-do-list
+nodejs, mongo, jquery, api-req

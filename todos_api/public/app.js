@@ -79,4 +79,7 @@ function updateTodo(todo){
     todo.toggleClass("done");
     todo.data('completed', isDone);
   })
+  // .catch(function(err){
+  //   console.log(err);
+  // })
 }
